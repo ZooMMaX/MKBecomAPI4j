@@ -1,7 +1,7 @@
 # MKBecomAPI4j
 
 ## Wrapper for API of Moscow Credit Bank (MCB)
-
+![Maven Central](https://img.shields.io/maven-central/v/ru.zoommax/MKBecomAPI4j?color=bridthgreen&style=plastic)
 ---
 
 ### Wrapper initialization
@@ -13,7 +13,7 @@ To initialize the wrapper, you need to set the parameters:
 * KEYPASS - alias key
 * TEST - `true` if the certificate is a test one, `false` otherwise
 
-Example
+![example initalize](https://img.shields.io/badge/EXAMPLE-initialize-yellow?style=plastic)
 
 ```
 ...
@@ -34,7 +34,7 @@ To create a request, the library provides `PayloadBuilder.class`.
 
 `ResponseParser.class` is provided in the library for parsing the response and getting fields.
 
-Example
+![example initalize](https://img.shields.io/badge/EXAMPLE-send_request_&_parse_response-yellow?style=plastic)
 
 ```java
 public class Main {

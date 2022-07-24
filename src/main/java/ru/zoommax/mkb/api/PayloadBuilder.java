@@ -214,7 +214,7 @@ public class PayloadBuilder {
     /**
      *
      * @param point Url из API МКБ
-     * @return
+     * @return ResponseParser
      */
     @SneakyThrows
     public ResposeParser request(MkbEndPoints point, RequestType type){
