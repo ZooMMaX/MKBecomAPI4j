@@ -2,6 +2,7 @@
 
 ## Wrapper for API of Moscow Credit Bank (MCB)
 ![Maven Central](https://img.shields.io/maven-central/v/ru.zoommax/MKBecomAPI4j?color=bridthgreen&style=plastic)
+![api v](https://img.shields.io/badge/MCB_API-v1.11-bridthgreen?style=plastic)
 ---
 
 ### Wrapper initialization
@@ -34,7 +35,7 @@ To create a request, the library provides `PayloadBuilder.class`.
 
 `ResponseParser.class` is provided in the library for parsing the response and getting fields.
 
-![example initalize](https://img.shields.io/badge/EXAMPLE-send_request_&_parse_response-yellow?style=plastic)
+![example srpr](https://img.shields.io/badge/EXAMPLE-send_request_&_parse_response-yellow?style=plastic)
 
 ```java
 public class Main {
@@ -66,3 +67,5 @@ public class Main {
 `RequestType` - enumeration of available types of http requests in the API.
 
 ---
+
+[MCB API DOCS](https://github.com/ZooMMaX/MKBecomAPI4j)
