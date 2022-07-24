@@ -72,3 +72,19 @@ public class Main {
 [OPEN MCB API DOCS](https://github.com/ZooMMaX/MKBecomAPI4j/blob/master/MCB-API-DOCS.pdf)
 
 ---
+
+![dependency maven](https://img.shields.io/badge/DEPENDENCY-Maven-C71A36?style=plastic&logo=apachemaven)
+
+```xml
+<dependency>
+  <groupId>ru.zoommax</groupId>
+  <artifactId>MKBecomAPI4j</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
+![dependency gradle](https://img.shields.io/badge/DEPENDENCY-Gradle-02303A?style=plastic&logo=gradle)
+
+```groovy
+implementation 'ru.zoommax:MKBecomAPI4j:1.0'
+```
