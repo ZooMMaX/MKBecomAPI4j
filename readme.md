@@ -3,6 +3,7 @@
 ## Wrapper for API of Moscow Credit Bank (MCB)
 ![Maven Central](https://img.shields.io/maven-central/v/ru.zoommax/MKBecomAPI4j?color=bridthgreen&style=plastic)
 ![api v](https://img.shields.io/badge/MCB_API-v1.11-bridthgreen?style=plastic)
+![GitHub](https://img.shields.io/github/license/ZooMMaX/MKBecomAPI4j?color=b&style=plastic)
 ---
 
 ### Wrapper initialization
