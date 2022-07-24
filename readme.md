@@ -68,6 +68,7 @@ public class Main {
 
 ---
 
+![pdf.ico](https://github.com/ZooMMaX/MKBecomAPI4j/blob/master/pdf.ico)
 [OPEN MCB API DOCS](https://github.com/ZooMMaX/MKBecomAPI4j/blob/master/MCB-API-DOCS.pdf)
 
 ---
