@@ -6,12 +6,158 @@
 
     <groupId>ru.zoommax</groupId>
     <artifactId>MKBecomAPI4j</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+    <name>MCB ECOM API 4 J</name>
+    <description>Wrapper for MCB ecom API</description>
+    <url>https://github.com/ZooMMaX/MKBecomAPI4j</url>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://raw.githubusercontent.com/ZooMMaX/MKBecomAPI4j/master/LICENSE</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/ZooMMaX/MKBecomAPI4j.git</connection>
+        <url>https://github.com/ZooMMaX/MKBecomAPI4j</url>
+        <developerConnection>scm:git:https://github.com/ZooMMaX/MKBecomAPI4j.git</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <developers>
+        <developer>
+            <id>ZooMMaX</id>
+            <name>Filatov Yuriy</name>
+            <url>https://github.com/ZooMMaX</url>
+            <email>zoommax2009@gmail.com</email>
+            <timezone>GMT+3</timezone>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+
+        <plugin.nexus.staging.ver>1.6.13</plugin.nexus.staging.ver>
+        <plugin.maven.source.ver>3.2.1</plugin.maven.source.ver>
+        <plugin.maven.javadoc.ver>3.4.0</plugin.maven.javadoc.ver>
+        <plugin.maven.gpg.ver>3.0.1</plugin.maven.gpg.ver>
+        <plugin.maven.compiler.ver>3.10.1</plugin.maven.compiler.ver>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>${plugin.nexus.staging.ver}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <serverId>ossrh</serverId>
+                        <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${plugin.maven.source.ver}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${plugin.maven.javadoc.ver}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${plugin.maven.gpg.ver}</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <gpgArguments>
+                            <gpgArgument>--pinentry-mode</gpgArgument>
+                            <gpgArgument>loopback</gpgArgument>
+                        </gpgArguments>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
