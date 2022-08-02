@@ -6,7 +6,7 @@
 
     <groupId>ru.zoommax</groupId>
     <artifactId>MKBecomAPI4j</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>MCB ECOM API 4 J</name>
     <description>Wrapper for MCB ecom API</description>
     <url>https://github.com/ZooMMaX/MKBecomAPI4j</url>
